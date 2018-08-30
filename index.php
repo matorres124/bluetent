@@ -1,5 +1,8 @@
 <?php
 
+/**
+ * Michael Torres
+ */
 
 
 /**
@@ -57,6 +60,7 @@ function taxes($amount, $percentage){
 
 /**
  * 
+ * Write a function that takes two words as its arguments and returns true if they are anagrams (contain the exact same letters) and false otherwise.
  * @param string $word1
  * @param string $word2
  */
@@ -65,7 +69,7 @@ function anagram($word1, $word2){
     $word2Array = str_split(strtolower($word2));
     
     if(count($word1Array) != count($word2Array)){
-        echo "Not an anagram.";
+        echo "False";
     }
     else{
         $compare1 = array();
@@ -89,7 +93,7 @@ function anagram($word1, $word2){
         ksort($compare1);
         ksort($compare2);
         
-        echo$compare1 === $compare2 ? "It is an anagram." : "It is not an anagram.";
+        echo$compare1 === $compare2 ? "True" : "False";
         
     }    
 }
